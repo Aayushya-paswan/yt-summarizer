@@ -2,3 +2,5 @@ streamlit
 youtube-transcript-api
 transformers
 torch
+yt-dlp
+validators
