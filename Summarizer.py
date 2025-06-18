@@ -1,7 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 from transformers import pipeline, AutoTokenizer
 import re
-
 def extract_video_id(url):
     # Support both long and short forms
     pattern = r"(?:v=|\/)([0-9A-Za-z_-]{11}).*"
