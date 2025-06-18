@@ -40,7 +40,7 @@ with st.form(key="Yt_form"):
                 txt_buffer.write(summaryy)
                 txt_buffer.seek(0)
 
-if button and summary != None:
+if button and summaryy != None:
     st.download_button(
         label="📄 Download Summary as .txt",
         data=summaryy.encode("utf-8"),
