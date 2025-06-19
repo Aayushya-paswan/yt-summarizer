@@ -20,7 +20,7 @@ def summarize(video_url, maxlen, minlen, randomness):
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
         "sshleifer/distilbart-cnn-12-6",
-        use_auth_token=os.getenv("HUGGINGFACEHUB_API_TOKEN")
+        use_auth_token=os.getenv("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")
     )
 
     try:  # to handle errors
