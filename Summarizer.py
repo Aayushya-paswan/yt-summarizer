@@ -11,7 +11,7 @@ def extract_video_id(url):
         return None
 def summarize(video_url, maxlen, minlen, randomness):
     video_id = extract_video_id(video_url)
-    tokenizer = AutoTokenizer.from_pretrained("sshleifer/distilbart-cnn-12-6")
+    tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
         subtitles_str = ""
