@@ -1,6 +1,7 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 from transformers import pipeline, AutoTokenizer
 import re
+import logging
 def extract_video_id(url):
     # Support both long and short forms
     pattern = r"(?:v=|\/)([0-9A-Za-z_-]{11}).*"
@@ -29,6 +30,7 @@ def summarize(video_url, maxlen, minlen, randomness):
 
         return summary[0]['summary_text']
 
-    except Exception:
+    except Exception as e:
+        logging.info(e)
         return None
 
