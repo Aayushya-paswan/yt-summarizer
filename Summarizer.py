@@ -20,7 +20,7 @@ def summarize(video_url, maxlen, minlen, randomness):
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
         "sshleifer/distilbart-cnn-12-6",
-        use_auth_token=os.getenv("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")
+        use_auth_token=os.getenv("HUGGINGFACEHUB_API_TOKEN")
     )
 
     try:  # to handle errors
@@ -82,7 +82,7 @@ def summarize(video_url, maxlen, minlen, randomness):
         summarizer = pipeline(
             "summarization",
             model="sshleifer/distilbart-cnn-12-6",
-            use_auth_token=os.getenv("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")
+            use_auth_token=os.getenv("HUGGINGFACEHUB_API_TOKEN")
         )
 
         # Generate summary
