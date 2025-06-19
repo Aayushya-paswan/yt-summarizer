@@ -11,7 +11,7 @@ def extract_video_id(url):
         return None
 def summarize(video_url, maxlen, minlen, randomness):
     video_id = extract_video_id(video_url)
-    tokenizer = AutoTokenizer.from_pretrained("sshleifer/distilbart-cnn-12-6")
+    tokenizer = AutoTokenizer.from_pretrained("t5-small")
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
         subtitles_str = ""
@@ -24,7 +24,7 @@ def summarize(video_url, maxlen, minlen, randomness):
 
         if len(tokens) > 1024:
             return "token"
-        summarizer = pipeline("summarization")
+        summarizer = pipeline("summarization", model="t5-small")
         summary = summarizer(subtitles_str, max_length=maxlen, min_length=minlen, do_sample=randomness)
 
         return summary[0]['summary_text']
