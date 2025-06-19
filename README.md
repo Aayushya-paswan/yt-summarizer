@@ -28,6 +28,8 @@ A simple Streamlit app to extract and summarize YouTube video subtitles using:
 
 ##  How to Run Locally
 
+NOTE:- Python version 3.11 is strictly required for this project
+
 Follow these simple steps to run this app on your machine:
 
 # Step 1: Clone this repository
