@@ -33,9 +33,7 @@ with st.form(key="Yt_form"):
                 st.warning("VIDEO LENGTH TOO LONG", icon="⚠️")
 
             elif summaryy is None:
-                st.warning("""Cannot process your request due to following reasons:\n
-                              1. Invalid/No Subtitles of the video.\n
-                              2. Video length too long (tokens unsupported by the model)\n""")
+                st.warning("""Cannot fetch request from API""")
             else:
                 st.balloons()
                 st.header("SUMMARY")
